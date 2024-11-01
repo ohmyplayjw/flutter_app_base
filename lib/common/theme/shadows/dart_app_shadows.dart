@@ -1,5 +1,6 @@
-import 'package:fast_app_base/common/common.dart';
 import 'package:flutter/material.dart';
+
+import 'abs_theme_shadows.dart';
 
 class DarkAppShadows extends AbsThemeShadows {
   const DarkAppShadows();

@@ -7,11 +7,12 @@
 
 import 'dart:io';
 
-import 'package:fast_app_base/app.dart';
-import 'package:fast_app_base/common/common.dart';
-import 'package:fast_app_base/common/data/preference/app_preferences.dart';
-import 'package:fast_app_base/common/language/language.dart';
-import 'package:fast_app_base/common/theme/custom_theme.dart';
+import 'package:com.ohmyplay.badminton_scoreboard_elite/app.dart';
+import 'package:com.ohmyplay.badminton_scoreboard_elite/common/common.dart';
+import 'package:com.ohmyplay.badminton_scoreboard_elite/common/data/preference/app_preferences.dart';
+import 'package:com.ohmyplay.badminton_scoreboard_elite/common/language/language.dart';
+import 'package:com.ohmyplay.badminton_scoreboard_elite/common/theme/custom_theme.dart';
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:isar/isar.dart';
@@ -32,7 +33,8 @@ void main() {
     await tester.pumpAndSettle();
 
     // 1. Localizations test
-    expect(currentLanguage, Language.korean); //startLocale: const Locale('ko') 이 설정되어 있으므로 한국어로 시작
+    expect(currentLanguage,
+        Language.korean); //startLocale: const Locale('ko') 이 설정되어 있으므로 한국어로 시작
 
     // 2. Custom Theme test
     expect(App.navigatorKey.currentContext!.themeType, CustomTheme.light);

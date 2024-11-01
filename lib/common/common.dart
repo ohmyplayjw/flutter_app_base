@@ -7,7 +7,6 @@ export 'package:flutter_svg/flutter_svg.dart';
 export 'package:nav/nav.dart';
 export 'package:quiver/strings.dart';
 export 'package:velocity_x/velocity_x.dart';
-
 export '../common/dart/extension/animation_controller_extension.dart';
 export '../common/dart/extension/collection_extension.dart';
 export '../common/dart/extension/context_extension.dart';
@@ -27,3 +26,10 @@ export 'widget/w_tap.dart';
 const defaultFontStyle = GoogleFonts.ptSerif;
 
 void voidFunction() {}
+
+bool isInt(str) {
+  if (str == null) {
+    return false;
+  }
+  return int.tryParse(str) != null;
+}

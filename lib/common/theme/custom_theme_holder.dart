@@ -1,7 +1,7 @@
-import 'package:fast_app_base/common/theme/custom_theme.dart';
 import 'package:flutter/material.dart';
 
 import '../common.dart';
+import 'custom_theme.dart';
 
 class CustomThemeHolder extends InheritedWidget {
   final AbstractThemeColors appColors;

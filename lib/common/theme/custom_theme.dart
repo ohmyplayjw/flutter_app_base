@@ -1,9 +1,12 @@
-import 'package:fast_app_base/common/common.dart';
-import 'package:fast_app_base/common/theme/color/dark_app_colors.dart';
-import 'package:fast_app_base/common/theme/color/light_app_colors.dart';
-import 'package:fast_app_base/common/theme/shadows/dart_app_shadows.dart';
-import 'package:fast_app_base/common/theme/shadows/light_app_shadows.dart';
 import 'package:flutter/material.dart';
+
+import '../constant/app_colors.dart';
+import 'color/abs_theme_colors.dart';
+import 'color/dark_app_colors.dart';
+import 'color/light_app_colors.dart';
+import 'shadows/abs_theme_shadows.dart';
+import 'shadows/dart_app_shadows.dart';
+import 'shadows/light_app_shadows.dart';
 
 enum CustomTheme {
   dark(
@@ -37,7 +40,8 @@ ThemeData lightTheme = ThemeData(
     // textTheme: CustomGoogleFonts.diphylleiaTextTheme(
     //   ThemeData(brightness: Brightness.light).textTheme,
     // ),
-    colorScheme: ColorScheme.fromSeed(seedColor: CustomTheme.light.appColors.seedColor));
+    colorScheme:
+        ColorScheme.fromSeed(seedColor: CustomTheme.light.appColors.seedColor));
 
 const darkColorSeed = Color(0xbcd5ff7e);
 ThemeData darkTheme = ThemeData(
@@ -49,4 +53,5 @@ ThemeData darkTheme = ThemeData(
     //   ThemeData(brightness: Brightness.dark).textTheme,
     // ),
     colorScheme: ColorScheme.fromSeed(
-        seedColor: CustomTheme.dark.appColors.seedColor, brightness: Brightness.dark));
+        seedColor: CustomTheme.dark.appColors.seedColor,
+        brightness: Brightness.dark));

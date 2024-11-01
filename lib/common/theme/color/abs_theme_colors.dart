@@ -1,14 +1,13 @@
-import 'package:fast_app_base/common/constant/app_colors.dart';
 import 'package:flutter/material.dart';
 
-export 'package:fast_app_base/common/constant/app_colors.dart';
+import '../../constant/app_colors.dart';
 
 typedef ColorProvider = Color Function();
 
 abstract class AbstractThemeColors {
   const AbstractThemeColors();
 
-  Color get seedColor => const Color(0xff26ff8c);
+  Color get seedColor => const Color.fromARGB(255, 71, 105, 150);
 
   Color get veryBrightGrey => AppColors.brightGrey;
 
@@ -36,6 +35,8 @@ abstract class AbstractThemeColors {
 
   Color get hintText => AppColors.middleGrey;
 
+  Color get brightText => AppColors.brightGrey;
+
   Color get focusedBorder => AppColors.darkGrey;
 
   Color get confirmText => AppColors.blue;
@@ -44,5 +45,13 @@ abstract class AbstractThemeColors {
 
   Color get snackbarBgColor => AppColors.mediumBlue;
 
-  Color get blueButtonBackground => AppColors.darkBlue;
+  Color get primaryBtnColor => AppColors.veryDarkGrey;
+
+  Color get blueBackground => AppColors.darkBlue;
+
+  Color get darkblueBackground => AppColors.veryDarkBlue;
+
+  Color get redBtnColor => const Color.fromARGB(255, 219, 33, 34);
+
+  Color get blueBtnColor => const Color(0xFF344D9F);
 }

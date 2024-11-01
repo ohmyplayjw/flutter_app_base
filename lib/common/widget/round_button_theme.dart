@@ -1,11 +1,15 @@
-import 'package:fast_app_base/common/common.dart';
+import 'package:com.ohmyplay.badminton_scoreboard_elite/common/common.dart';
 import 'package:flutter/material.dart';
 
+import '../constant/app_colors.dart';
+
 enum RoundButtonTheme {
-  blue(AppColors.blue, Colors.white, AppColors.blue, backgroundColorProvider: blueColorProvider),
+  blue(AppColors.blue, Colors.white, AppColors.blue,
+      backgroundColorProvider: blueColorProvider),
   whiteWithBlueBorder(Colors.white, AppColors.darkBlue, AppColors.blue,
       backgroundColorProvider: blueColorProvider),
-  blink(AppColors.blue, Colors.white, Colors.black, backgroundColorProvider: blueColorProvider);
+  blink(AppColors.blue, Colors.white, Colors.black,
+      backgroundColorProvider: blueColorProvider);
 
   const RoundButtonTheme(
     this.bgColor,
@@ -22,6 +26,8 @@ enum RoundButtonTheme {
   final Color shadowColor;
 }
 
-Color blueColorProvider(BuildContext context) => context.appColors.blueButtonBackground;
+Color blueColorProvider(BuildContext context) =>
+    context.appColors.blueBackground;
 
-Color Function(BuildContext context) defaultColorProvider(Color color) => blueColorProvider;
+Color Function(BuildContext context) defaultColorProvider(Color color) =>
+    blueColorProvider;
